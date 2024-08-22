@@ -6,6 +6,7 @@
 
 </head>
 <body>
+
 <div id="wrap">
 
 	<tiles:insertAttribute name="header"/>
@@ -13,5 +14,6 @@
 	<tiles:insertAttribute name="footer"/>
 	
 </div>
+
 </body>
 </html>

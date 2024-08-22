@@ -23,9 +23,9 @@ import egovframework.com.main.service.MainService;
 @Controller
 public class MainController {
 
-	//controller에 MainService를 연결
-	@Resource(name="MainService")
-	private MainService mainService;
+//	//controller에 MainService를 연결
+//	@Resource(name="MainService")
+//	private MainService mainService;
 	
 	
 	
@@ -37,28 +37,28 @@ public class MainController {
 	}
 	
 	//jsp연결
-	@RequestMapping("main/student.do")
-	public ModelAndView student() {
-		
-		ModelAndView mv = new ModelAndView("main/student");
-		
-		List<HashMap<String, Object>> list = mainService.selectStudentInfo();
-		mv.addObject("list", list);
-
-		return mv;
-		}
+//	@RequestMapping("main/student.do")
+//	public ModelAndView student() {
+//		
+//		ModelAndView mv = new ModelAndView("main/student");
+//		
+//		List<HashMap<String, Object>> list = mainService.selectStudentInfo();
+//		mv.addObject("list", list);
+//
+//		return mv;
+//		}
 	
 	//jsp연결
-	@RequestMapping("main/score.do")
-	public ModelAndView score() {
-		
-		ModelAndView mv = new ModelAndView("main/score");
-		
-		List<HashMap<String, Object>> list = mainService.selectScoreInfo();
-		
-		mv.addObject("list", list);
-		return mv;
-	}
+//	@RequestMapping("main/score.do")
+//	public ModelAndView score() {
+//		
+//		ModelAndView mv = new ModelAndView("main/score");
+//		
+//		List<HashMap<String, Object>> list = mainService.selectScoreInfo();
+//		
+//		mv.addObject("list", list);
+//		return mv;
+//	}
 	
 	
 //	@RequestMapping("/sessionTest.do")
@@ -90,25 +90,25 @@ public class MainController {
 //		return mv;
 //	}
 	
-	@RequestMapping("/cookieTest.do")
-	public ModelAndView cookieTest(HttpServletResponse response) throws UnsupportedEncodingException {
-		ModelAndView  mv = new ModelAndView("main");
-		
-		Cookie cookie = new Cookie("messege", URLEncoder.encode("from main", "UTF-8"));
-		response.addCookie(cookie);
-		return mv;
-	}
-	
-	@RequestMapping("/getCookie.do")
-	public ModelAndView getCookie (@CookieValue(value = "messege", required =false) Cookie cookie) throws UnsupportedEncodingException {
-		ModelAndView  mv = new ModelAndView("main");
-		
-		if(cookie != null) {
-			String value = cookie.getValue();
-			System.out.println("cookie messege : " + URLDecoder.decode(value, "UTF-8"));
-		}
-		
-		return mv;
-	} 
+//	@RequestMapping("/cookieTest.do")
+//	public ModelAndView cookieTest(HttpServletResponse response) throws UnsupportedEncodingException {
+//		ModelAndView  mv = new ModelAndView("main");
+//		
+//		Cookie cookie = new Cookie("messege", URLEncoder.encode("from main", "UTF-8"));
+//		response.addCookie(cookie);
+//		return mv;
+//	}
+//	
+//	@RequestMapping("/getCookie.do")
+//	public ModelAndView getCookie (@CookieValue(value = "messege", required =false) Cookie cookie) throws UnsupportedEncodingException {
+//		ModelAndView  mv = new ModelAndView("main");
+//		
+//		if(cookie != null) {
+//			String value = cookie.getValue();
+//			System.out.println("cookie messege : " + URLDecoder.decode(value, "UTF-8"));
+//		}
+//		
+//		return mv;
+//	} 
 	
 }

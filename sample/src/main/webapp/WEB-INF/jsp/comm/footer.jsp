@@ -7,16 +7,7 @@
 <title>Insert title here</title>
 </head>
 <style type="text/css">
-	header{
-		background-color: lightgray;
-		font-weight :bold;
-		font-size: 30pt;
-		height: 50px;
-		}
-		
-		a{
-		text-decoration: none;
-		}
+	
 
 </style>
 <body>
